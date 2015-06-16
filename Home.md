@@ -1,8 +1,8 @@
 # Unix 教程#
 
-UNIX 是一台能够同时处理来自多个用户活动的计算机操作系统。
+UNIX 是一种能够同时处理多个用户活动的计算机操作系统。
 
-Unix 起源于 1969 年在 AT&T 贝尔实验室由肯汤普森和丹尼斯 · 里奇完成。本教程在 Unix 上给出了一个很好的了解。
+Unix 由 AT&T 贝尔实验室的肯汤普森和丹尼斯 · 里奇开发完成，并于 1969 年左右面世。本教程对 Unix 做了详细的介绍。
 
 # 读者 #
 
@@ -10,21 +10,21 @@ Unix 起源于 1969 年在 AT&T 贝尔实验室由肯汤普森和丹尼斯 · �
 
 # 前提 #
 
-我们假设您对操作系统和其功能的了解很少。一个基本的了解，对各种计算机的概念的基本了解也将帮助您理解本教程中提供的各种练习。
+我们假设您对操作系统和其功能的了解很少。对各种计算机的概念的基本了解也将帮助您理解本教程中提供的各种练习。
 
 # 执行 Unix Shell 程序 #
 
-如果你愿意学习 Unix/Linux 基本命令和 shell 脚本，但是您没有设置为相同，不要担心。[ Compileonline.com ](http://www.compileonline.com/execute_ksh_online.php) 是用于在给你舒适的单次点击执行的实际的编程经验的高端专用服务器上。是的！它是完全免费，而且是在线的。
+如果你愿意学习 Unix/Linux 基本命令和 shell 脚本，但是您没有安装系统，不要担心。运行在高性能服务器上的[ Compileonline.com ](http://www.compileonline.com/execute_ksh_online.php) 可以给你舒适的单次点击执行的实际编程经验。是的！它是完全免费，而且是在线的。
 
 # 1 - Unix 快速参考指南 #
 
-一个 Unix 的快速参考指南为 Unix 系统用户。
+一个给 Unix 系统用户的 Unix 快速参考指南。
 
 [ Unix 快速参考指南 ](http://www.tutorialspoint.com/unix/unix-quick-guide.htm)
 
 # 2 - 有用的 Unix 资源 #
 
-在此页给出了关于 Unix 网站、 书籍和文章的集合。
+在此页面给出了一些关于 Unix 的网站、 书籍和文章的集合。
 
 [ 有用的 Unix 资源 ](http://www.tutorialspoint.com/unix/unix-useful-resources.htm)
 
@@ -36,6 +36,6 @@ Unix 起源于 1969 年在 AT&T 贝尔实验室由肯汤普森和丹尼斯 · �
 
 # 4 - Unix 教程 PDF 版
 
-下载 PDF 格式的快速 Unix 教程。
+下载 PDF 格式的 Unix 教程。
 
 [ Unix 教程 PDF 版 ](http://www.tutorialspoint.com/unix/unix_pdf_version.htm)
