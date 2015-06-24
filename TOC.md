@@ -6,7 +6,7 @@
   - [File Permission](file-permission.md)
   - [Environment](environment.md)
   - [Basic Utilities](basic-utilities.md)
-  - [Pipes&Files](pipes&files.md)
+  - [Pipes&Filters](pipes&filters.md)
   - [Processes](processes.md)
   - [Communication](communication.md)
   - [The vi Editor](the-vi-editor.md)
