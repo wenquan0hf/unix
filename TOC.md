@@ -19,7 +19,7 @@
   - [Decision Making](decision-making.md)
   - [Shell Loops](shell-loops.md)
   - [Loop Control](loop-control.md)
-  - [Shell Substitutions](shell-substitutions)
+  - [Shell Substitutions](shell-substitutions.md)
   - [Quoting Mechanisms](quoting-mechanisms.md)
   - [IO Redirections](IO-redirections.md)
   - [Shell Functions](shell-functions.md)
