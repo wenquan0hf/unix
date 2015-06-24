@@ -1,4 +1,4 @@
-##命令行 Manpage 帮助
+##Shell Manpage 帮助
 
 Unix命令都有许多可选的和强制性的选项，而忘记这些命令的完整语法是很常见的事情。
 
@@ -15,7 +15,7 @@ Unix系统工作时，以下是获取 Unix 命令细节的简单指令
 
     $man command
 
- ###举例：
+###举例：
 
 你现在想象任何一个命令并且你需要得到与这个命令对应的帮助。假设你想知道 pwd 命令的用法,那么你只需要使用以下命令:
 
@@ -58,10 +58,10 @@ Man Page通常被划分为不同的部分，而且由于不同 Man page 作者�
 
 ###有用的Shell命令:
 
-现在你知道如何进行,下面的链接将会给你一个最重要和频繁使用 Unix Shell命令列表。
+下面的链接中给出了最重要和频繁使用 Unix Shell命令列表。
 
 
-如果你不知道如何使用任何命令然后使用 Man page 获得命令的完整细节。
+如果你不知道如何使用命令，可以使用 Man page 获得命令的完整细节。
 
 
-这里是 Unix Shell -有用的命令列表
+这里是 [Unix Shell -有用的命令列表](http://www.tutorialspoint.com/unix/unix-useful-commands.htm)
