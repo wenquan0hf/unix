@@ -1,12 +1,12 @@
-# UNIX 系统日志 #
+# 系统日志
 
 UNIX 系统有一个非常灵活和强大的日志系统，它让你能够记录几乎任何你能想象的东西，然后你可以操作日志来获取你需要的信息。
 
 许多版本的 UNIX 提供了一个名为 *syslog* 的通用日志工具，有信息需要记录的单独程序要将信息发送到 syslog。
 
-Unix *syslog* 是一个主机可配置的，统一的系统日志工具。该系统采用集中式的系统日志进程，其运行程序 /etc/syslogd 或者 /etc/syslog。
+Unix *syslog* 是一个主机可配置的，统一的系统日志工具。该系统采用集中式的系统日志进程，其运行程序 `/etc/syslogd` 或者 `/etc/syslog`。
 
-系统记录器的操作是相当简单的。程序发送日志条目到 *syslogd*，其将会在配置文件 /etc/syslogd.conf 或 /etc/syslog 中查找，当找到一个匹配后，将日志消息写入到期望的日志文件中。
+系统记录器的操作是相当简单的。程序发送日志条目到 *syslogd*，其将会在配置文件 `/etc/syslogd.conf` 或 `/etc/syslog` 中查找，当找到一个匹配后，将日志消息写入到期望的日志文件中。
 
 现有你应该了解的四种基本日志术语：
 
@@ -32,9 +32,9 @@ Unix *syslog* 是一个主机可配置的，统一的系统日志工具。该系
    </tr>
 </table>
 
-## Syslog Facilities： ##
-下面是 selector 可用的 facility。不是所有的 facility 都存在于所有版本的 UNIX。
+## Syslog Facilities
 
+下面是 selector 可用的 facility。不是所有的 facility 都存在于所有版本的 UNIX。
 
 <table>
 <tr>
@@ -103,8 +103,7 @@ Unix *syslog* 是一个主机可配置的，统一的系统日志工具。该系
    </tr>
 </table>
 
-
-## Syslog 优先级： ##
+## Syslog 优先级
 
 syslog 的优先级( Priority )如下表：
 
@@ -157,11 +156,11 @@ facility 和 level 的组合能够让你辨别记录了什么和这些日志信�
 
 当你指定了一个 level，系统会记录这一 level 及更高 level 的一切信息。
 
-## 文件 /etc/syslog.conf： ##
+## 文件 /etc/syslog.conf
 
 文件 /etc/syslog.conf 用于配置记录消息的位置。一个典型的 syslog.conf 文件看起来应该像这样：
 
-
+```
 	*.err;kern.debug;auth.notice /dev/console
 	daemon,auth.notice           /var/log/messages
 	lpr.info                     /var/log/lpr.log
@@ -174,35 +173,31 @@ facility 和 level 的组合能够让你辨别记录了什么和这些日志信�
 	*.emerg                      *
 	*.alert                      |program_name
 	mark.*                       /dev/console
-
+```
 
 文件中的每一行包含两部分：
 
 - 一个消息 selector，其指定了哪种消息用来记录。例如，内核的所有错误信息或所有调试信息。
-
 - 一个 action，其指明了对接收的消息该怎么处理。例如，写入一个文件中或者将消息发送到用户的终端。
 
 下面是上述配置的注意事项：
 
 - 消息 selector 有两部分：facility 和 priority。例如， kern.debug 选择了所有由内核( facility )产生的的调试信息( priority )。
-
 - 消息 selectetor kern.debug 选择了所有 priority 大于 debug 的信息。
-
 - 在任何 facility 和 priority 位置上的星号，表示“所有”的意思。例如， \*.debug 表示所有 facility 的调试信息，而 kern.\* 表示内核所产生的所有信息。
-
 - 你也可以用逗号来指定多个 facility。两个或两个以上的 selectetor 可以用分号组合在一起。
 
-## 日志记录 Action： ##
+## 日志记录 Action
 
 action 部分指定了下面五个 action 中的其中一个：
 
-1. 将信息记录到一个文件或设备。例如，/var/log/messages lpr.log 或者 /dev/console。
+1. 将信息记录到一个文件或设备。例如，`/var/log/lpr.log` 或者 `/dev/console`。
 2. 发送一个消息给一个用户。你可以用逗号分开指定多个用户名（例如，root，amrood）。
 3. 发送一个消息给所有用户。在这种情况下，action 部分包含了一个星号（例如，\*）。
 4. 用管道发送消息到程序。在这种情况下，程序是在 UNIX 管道符号（|）后指定。
-5. 将消息发送到另一台主机上的 syslog。在这种情况下，action 部分包含了一个前面有 at 符号的主机名（例如，@tutorialspoint.com）。
+5. 将消息发送到另一台主机上的 syslog。在这种情况下，action 部分包含了一个前面有 at 符号的主机名（例如，@jikexueyuan.com）。
 
-## logger 命令： ##
+## logger 命令
 
 UNIX 提供了 **logger** 命令，这是处理系统日志记录的一个非常有用的命令。**logger** 命令发送日志消息到 syslogd 守护进程，从而驱使系统记录日志。
 
@@ -210,7 +205,9 @@ UNIX 提供了 **logger** 命令，这是处理系统日志记录的一个非常
 
 该命令的格式是：
 
+```
     logger [-i] [-f file] [-p priority] [-t tag] [message]...
+```
 
 下面是具体的参数细节：
 
@@ -241,15 +238,15 @@ UNIX 提供了 **logger** 命令，这是处理系统日志记录的一个非常
    </tr>
 </table>
 
-## 日志轮换： ##
+## 日志轮换
 
 日志文件有快速增长的特点，并消耗大量的磁盘空间。大多数 UNIX 发行版系统使用了工具（如 newsyslog 或 logrotate）启用日志轮换功能。
 
 这些工具由 cron 守护进程在一个频繁的时间间隔里调用。你可以在 newsyslog 或 logrotate 的手册页中获取更多的细节内容。
 
-## 重要日志文件的位置 ##
+## 重要日志文件的位置
 
-所有的系统应用程序创建自己的日志文件在 /var/log 和它的子目录里。下面这里有几个重要的应用，其相应的日志目录：
+所有的系统应用程序创建自己的日志文件在 `/var/log` 和它的子目录里。下面这里有几个重要的应用，其相应的日志目录：
 
 <table>
 <tr>

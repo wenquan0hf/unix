@@ -1,6 +1,6 @@
-## Unix shell 基本操作符
+# 基本操作符
 
-每一种 shell 都支持各种各样的操作符。我们的教程基于默认的 shell(Bourne)，所以在我们的教程中涵盖所有重要的 Bourne shell 操作符。
+每一种 Shell 都支持各种各样的操作符。我们的教程基于默认的 Shell(Bourne)，所以在我们的教程中涵盖所有重要的 Bourne Shell 操作符。
 
 下面列出我们将讨论的操作符：
 
@@ -10,31 +10,34 @@
 - 字符串运算符。
 - 文件测试操作符。
 
-最初的 Bourne shell 没有任何机制来执行简单算术运算，它使用外部程序 **awk** 或者最简单的程序 **expr**。
+最初的 Bourne Shell 没有任何机制来执行简单算术运算，它使用外部程序 **awk** 或者最简单的程序 **expr**。
 
 下面我们用一个简单的例子说明，两个数字相加：
 
+```
     #!/bin/sh
     
     val=`expr 2 + 2`
     echo "Total value : $val"
+```
 
 这将产生以下结果：
 
+```
     Total value : 4
+```
 
 注意以下事项：
 
 - 操作符和表达式之间必须有空格，例如 2+2 是不正确的，这里应该写成 2 + 2。
 - 完整的表达应该封闭在两个单引号 '' 之间。
 
-### 算术运算符:
+## 算术运算符
 
 下面列出 Bourne Shell 支持的算术运算符。
 
 假设变量 a 赋值为 10，变量 b 赋值为 20：
 
-[示例说明](http://www.tutorialspoint.com/unix/unix-arithmetic-operators.htm)
 <table>
 <tr>
 <th>运算符</th>
@@ -44,42 +47,42 @@
 <tr>
 <td>+</td>
 <td>加法 - 将操作符两边的数加起来</td>
-<td>`expr $a + $b` will give 30</td>
+<td>`expr $a + $b` = 30</td>
 </tr>
 <tr>
 <td>-</td>
 <td>减法 - 用操作符左边的操作数减去右边的操作数</td>
-<td>`expr $a - $b` will give -10</td>
+<td>`expr $a - $b` = -10</td>
 </tr>
 <tr>
 <td>*</td>
 <td>乘法 - 将操作符两边的数乘起来</td>
-<td>`expr $a \* $b` will give 200</td>
+<td>`expr $a \* $b` = 200</td>
 </tr>
 <tr>
 <td>/</td>
 <td>除法 - 用操作符左边的操作数除以右边的操作数</td>
-<td>`expr $b / $a` will give 2</td>
+<td>`expr $b / $a` = 2</td>
 </tr>
 <tr>
 <td>%</td>
 <td>取模 - 用操作符左边的操作数除以右边的操作数，返回余数</td>
-<td>`expr $b % $a` will give 0</td>
+<td>`expr $b % $a` = 0</td>
 </tr>
 <tr>
 <td>=</td>
 <td>赋值 - 将操作符右边的操作数赋值给左边的操作数</td>
-<td>a=$b would assign value of b into a</td>
+<td>a=$b 将 b 的值赋给了 a</td>
 </tr>
 <tr>
 <td>==</td>
-<td>相等 - 比较两个数字，如果相同，返回true</td>
-<td>[ $a == $b ] would return false.</td>
+<td>相等 - 比较两个数字，如果相同，返回 true</td>
+<td>[ $a == $b ] = false</td>
 </tr>
 <tr>
 <td>!=</td>
 <td>不相等 - 比较两个数字，如果不同，返回true。</td>
-<td>[ $a != $b ] would return true.</td>
+<td>[ $a != $b ] = true</td>
 </tr>
 </table>
 
@@ -87,15 +90,14 @@
 
 所有的算术计算都是针对长整数操作的。
 
-### 关系运算符:
+## 关系运算符
 
 Bourne Shell 支持以下的关系运算符，这些运算符是专门针对数值数据的。它们不会对字符串值起作用，除非他们的值是数值数据。
 
-例如，下面的操作符将检查 10 和 20 之间的关系以及 “10” 和 “20”的关系，但不能用于判断 “ten” 和 “twenty” 的关系。
+例如，下面的操作符将检查 10 和 20 之间的关系以及 “10” 和 “20” 的关系，但不能用于判断 “ten” 和 “twenty” 的关系。
 
 假设变量 a 赋值为 10， 变量 b 赋值为 20：
 
-[示例说明](http://www.tutorialspoint.com/unix/unix-relational-operators.htm)
 <table>
 <tr>
 <th>运算符</th>
@@ -136,13 +138,12 @@ Bourne Shell 支持以下的关系运算符，这些运算符是专门针对数�
 
 这里需要非常注意是，所有的条件表达式和操作符之间都必须用空格隔开，例如 [$a <= $b] 是正确的，而 [$a<=$b] 是不正确的。
 
-### 布尔操作符:
+##布尔操作符
 
 Bourne Shell 支持以下的布尔操作符。
 
 假设变量 a 赋值为 10， 变量 b 赋值为 20：
 
-[示例说明](http://www.tutorialspoint.com/unix/unix-boolean-operators.htm)
 <table>
 <tr>
 <th>运算符</th>
@@ -292,14 +293,3 @@ Bourne Shell 支持以下字符串运算符。
 </tr>
 </table>
 
-### C Shell操作符:
-
-下面的链接给出了关于 C Shell 操作符的简单介绍。
-
-[C Shell操作符](http://www.tutorialspoint.com/unix/unix-c-shell-operators.htm)
-
-### Korn Shell操作符:
-
-下面的链接给出了关于 Korn Shell 操作符的简单介绍。
-
-[Korn Shell操作符](http://www.tutorialspoint.com/unix/unix-korn-shell-operators.htm)
